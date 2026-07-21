@@ -59,8 +59,8 @@ def sql_search(request):
         params = []
 
         # Fix A1
-        sql = "SELECT id, username FROM auth_user WHERE username LIKE %s"
-        params = [f"%{q}%"]
+        # sql = "SELECT id, username FROM auth_user WHERE username LIKE %s"
+        # params = [f"%{q}%"]
 
         with connection.cursor() as cursor:
             cursor.execute(sql, params)
